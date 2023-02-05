@@ -23,7 +23,7 @@ app.use("/api/v1/dalle", dalleRoutes)
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 
-app.get("*", function (_, res) {
+app.get("*", function (req, res) {
     res.sendFile(
         path.join(__dirname, "../client/dist/index.html"),
         function (err) {

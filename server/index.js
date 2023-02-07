@@ -26,7 +26,7 @@ app.use("/api/v1/dalle", dalleRoutes)
 //     res.sendFile(
 //         path.join(__dirname, "../client/dist/index.html"),
 //         function (err) {
-//             res.status(500).send(err)
+//             
 //         }
 //     )
 // })

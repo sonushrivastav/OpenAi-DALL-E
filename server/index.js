@@ -2,10 +2,7 @@ import express  from "express";
 import * as dotenv from "dotenv"
 import cors from "cors"
 const app = express();
-// import path from "path";
-// import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+
 const PORT =  process.env.PORT || 4000
 import connectDB from "./mongodb/connection.js"; 
 dotenv.config();
@@ -18,18 +15,7 @@ app.use(express.json({ limit: "50mb" }))
 app.use("/api/v1/post",postRoutes)
 app.use("/api/v1/dalle", dalleRoutes)
 
-// // serving the frontend
-// app.use(express.static(path.join(__dirname, "../client/dist")));
 
-
-// app.get("*", function (req, res) {
-//     res.sendFile(
-//         path.join(__dirname, "../client/dist/index.html"),
-//         function (err) {
-//             
-//         }
-//     )
-// })
 
 app.get("/", async (req, res) => {
     res.send("hello from DAll-E!")

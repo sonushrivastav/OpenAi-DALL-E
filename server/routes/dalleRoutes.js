@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
 
         res.status(200).json({photo:image})
     } catch (error) {
-        res.status(500).json(error?.response.data.error.message)
+        res.status(500).json(error?.response?.data?.error.message)
     }
 })
 export default router
